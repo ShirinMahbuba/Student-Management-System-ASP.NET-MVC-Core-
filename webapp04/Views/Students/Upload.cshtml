@@ -1,0 +1,89 @@
+﻿@model webapp04.Models.Student
+
+@{
+    ViewData["Title"] = "Upload";
+}
+
+<h3 class="alert alert-primary">Upload Student Photograph</h3>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+       @* <form asp-action="Edit">*@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="StudentRoll" class="control-label"></label>
+                <input asp-for="StudentRoll" class="form-control" />
+                <span asp-validation-for="StudentRoll" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnrollmentDate" class="control-label"></label>
+                <input asp-for="EnrollmentDate" class="form-control" />
+                <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
+            </div>
+          @*  <div class="form-group">
+                <label asp-for="PhotoPath" class="control-label"></label>
+                <input asp-for="PhotoPath" class="form-control" />
+                <span asp-validation-for="PhotoPath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>*@
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="alert alert-primary">Back to List</a>
+</div>
+
+
+<br />
+<br />
+
+<h3 class="alert alert-primary"> File Upload Section </h3>
+<h4 id="msg" class="text-primary">@ViewBag.msg</h4>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="UploadPhoto" enctype="multipart/form-data" method="post">
+            <div class="input-group">
+                <input type="hidden" asp-for="Id" />
+                <input type="file" name="filetoupload" class="form-control" />
+                <button type="submit" class="btn btn-primary"> Upload Photo </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function(){
+
+            $('#msg').show();
+            $('#msg').fadeOut(5000);
+        })
+    </script>
+}
+
+
+@*@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@
