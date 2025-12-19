@@ -10,8 +10,11 @@
 <p>
     <a asp-action="Create" class="btn btn-outline-primary">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<div class="card-body p-0">
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead class="table-light">
+                
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.StudentRoll)
@@ -83,3 +86,6 @@
 }
     </tbody>
 </table>
+    </div>
+</div>
+

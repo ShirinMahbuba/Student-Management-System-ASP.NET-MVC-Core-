@@ -260,3 +260,4 @@ C:\Users\ASUS ZenBook\Downloads\proffetional Asp.net course\C# practice\webapp04
 C:\Users\ASUS ZenBook\Downloads\proffetional Asp.net course\C# practice\webapp04\webapp04\obj\Debug\net8.0\webapp04.pdb
 C:\Users\ASUS ZenBook\Downloads\proffetional Asp.net course\C# practice\webapp04\webapp04\obj\Debug\net8.0\webapp04.genruntimeconfig.cache
 C:\Users\ASUS ZenBook\Downloads\proffetional Asp.net course\C# practice\webapp04\webapp04\obj\Debug\net8.0\ref\webapp04.dll
+C:\Users\ASUS ZenBook\Downloads\proffetional Asp.net course\C# practice\webapp04\webapp04\obj\Debug\net8.0\webapp04.sourcelink.json

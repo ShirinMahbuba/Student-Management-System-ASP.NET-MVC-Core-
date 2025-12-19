@@ -15,5 +15,8 @@ namespace webapp04.Data
         }
 
         public DbSet<webapp04.Models.Student> Student { get; set; } = default!;
+        
+        public DbSet<webapp04.Models.Department> Department { get; set; } = default!;
+        public DbSet<webapp04.Models.Course> Course { get; set; } = default!;
     }
 }

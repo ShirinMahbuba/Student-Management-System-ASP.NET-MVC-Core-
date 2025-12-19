@@ -7,12 +7,12 @@ namespace webapp04.Models
         public int Id { get; set; }
 
         [Required]
-        public string Title { get; set; } = string.Empty;
+        public string? Title { get; set; }
 
         [Range(1, 10)]
         public int Credits { get; set; }
 
         public int DepartmentId { get; set; }
-        public Department Department { get; set; } = null!;
+        public Department? Department { get; set; } 
     }
 }
