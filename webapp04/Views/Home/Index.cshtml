@@ -1,8 +1,36 @@
-﻿@{
+@model List<webapp04.Models.Student>
+
+    <br/>
+
+@{
     ViewData["Title"] = "Home Page";
+    int i = 1;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if (Model != null)
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>SL</th>
+                <th>Photograph</th>
+                <th>Student Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@i.</td>
+                    <td>
+                        <img src="~/StudentPhoto/@item.PhotoPath" style="width:70px" />
+                    </td>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+}
