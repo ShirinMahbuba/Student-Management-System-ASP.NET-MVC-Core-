@@ -6,17 +6,22 @@ namespace webapp04.Controllers
 {
     public class HomeController : Controller
     {
+        
+
         private readonly ILogger<HomeController> _logger;
+ private readonly webapp04Context _context;
+ public HomeController(ILogger<HomeController> logger,webapp04Context context)
+ {
+     _logger = logger;
+     _context = context;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+ }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+ public IActionResult Index()
+ {
+     var result = _context.Student.ToList();
+     return View(result);
+ }
 
         public IActionResult Privacy()
         {
